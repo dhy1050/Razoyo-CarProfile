@@ -1,0 +1,34 @@
+.car-profile {
+    line-height: 15px;
+    font-weight: bolder;
+    text-align: center;
+    & .car-year {
+        margin-top: 10px;
+    }
+    .car-img {
+        width: 90vw;
+    }
+    @media screen and (min-width: 768px) {
+        .car-img {
+            max-width: 426px;
+        }
+    }
+}
+
+.result {
+    margin-top: 20px;
+    & > p {
+        font-size: 20px
+    }
+    & .car {
+        border: 1px black solid;
+        background: aliceblue;
+        padding: 10px;
+    }
+}
+
+#form-search-car {
+    & button {
+        margin-top: 12px;
+    }
+}

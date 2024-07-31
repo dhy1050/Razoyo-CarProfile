@@ -1,0 +1,15 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd"> 
+    <update handle="customer_account"/> 
+    <body> 
+        <referenceBlock name="page.main.title"> 
+            <action method="setPageTitle"> 
+                <argument translate="true" name="title" xsi:type="string">My Car</argument> 
+            </action> 
+        </referenceBlock> 
+        <referenceContainer name="content"> 
+            <block class="Razoyo\CarProfile\Block\CarProfile" name="my_car" template="Razoyo_CarProfile::mycar.phtml"> 
+            </block> 
+        </referenceContainer> 
+        <move element="customer-account-navigation-car-profile" destination="customer_account_navigation" after="customer-account-navigation-orders-link"/>
+    </body> 
+</page>

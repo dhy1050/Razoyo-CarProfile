@@ -1,0 +1,32 @@
+<?php 
+$carData = $block->checkSavedCar();
+?>
+<?php if ($carData) : ?>
+<div class="car-profile">
+    <img src=<?= $carData['car']['image']?> class="car-img">
+    <p class="car-year">Year: <?= $carData['car']['year']?></p>
+    <p class="car-make">Make: <?= $carData['car']['make']?></p>
+    <p class="car-mode">Model: <?= $carData['car']['model']?></p>
+    <p class="car-price">Price: <?= $carData['car']['price']?></p>
+    <p class="car-seats">Seats: <?= $carData['car']['seats']?></p>
+    <p class="car-mpg">MPG: <?= $carData['car']['mpg']?></p>
+</div>
+<?php endif; ?>
+
+<form action="#" method="get" id="form-search-car">
+    <div class="field">
+        <label for="make" class="label"><span>Enter the make you prefer</span></label>
+        <input type="text" id="make" name="make" value="" title="make" class="input-text required-entry" data-validate="{required:true}" aria-required="true">
+         <button type="submit" class="action save primary" data-action="save-address" title="Save Address">
+            <span>search</span>
+        </button>
+    </div>
+</form>
+<div class="result"></div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "searchCar": {}
+    }
+}
+</script>
